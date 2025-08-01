@@ -2476,6 +2476,16 @@ locals {
       scope       = "parent"
       regex       = "^[a-zA-Z0-9][a-zA-Z0-9-._]+[a-zA-Z0-9_]$"
     }
+    virtual_hub = {
+      name        = substr(join("-", compact([local.prefix, "vhub", local.suffix])), 0, 80)
+      name_unique = substr(join("-", compact([local.prefix, "vhub", local.suffix_unique])), 0, 80)
+      dashes      = true
+      slug        = "vhub"
+      min_length  = 1
+      max_length  = 80
+      scope       = "parent"
+      regex       = "^[a-zA-Z0-9][a-zA-Z0-9-._]+[a-zA-Z0-9_]$"
+    }
     windows_virtual_machine = {
       name        = substr(join("-", compact([local.prefix, "vm", local.suffix])), 0, 15)
       name_unique = substr(join("-", compact([local.prefix, "vm", local.suffix_unique])), 0, 15)
