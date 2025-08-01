@@ -1226,6 +1226,11 @@ output "virtual_wan" {
   description = "Virtual Wan"
 }
 
+output "virtual_hub" {
+  value = local.az.virtual_hub
+  description = "Virtual Hub"
+}
+
 output "windows_virtual_machine" {
   value       = local.az.windows_virtual_machine
   description = "Windows Virtual Machine"
