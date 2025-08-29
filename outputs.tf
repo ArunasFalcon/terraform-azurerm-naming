@@ -896,6 +896,11 @@ output "public_ip" {
   description = "Public Ip"
 }
 
+output "ip_group" {
+  value = local.az.ip_group
+  description = "Ip group"
+}
+
 output "public_ip_prefix" {
   value       = local.az.public_ip_prefix
   description = "Public Ip Prefix"

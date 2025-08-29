@@ -1816,6 +1816,16 @@ locals {
       scope       = "parent"
       regex       = "^[a-zA-Z0-9][a-zA-Z0-9-._]+[a-zA-Z0-9_]$"
     }
+    ip_group = {
+      name        = substr(join("-", compact([local.prefix, "ipgr", local.suffix])), 0, 80)
+      name_unique = substr(join("-", compact([local.prefix, "ipgr", local.suffix_unique])), 0, 80)
+      dashes      = true
+      slug        = "ipgr"
+      min_length  = 1
+      max_length  = 80
+      scope       = "parent"
+      regex       = "^[a-zA-Z0-9][a-zA-Z0-9-._]+[a-zA-Z0-9_]$"
+    }
     public_ip_prefix = {
       name        = substr(join("-", compact([local.prefix, "pippf", local.suffix])), 0, 80)
       name_unique = substr(join("-", compact([local.prefix, "pippf", local.suffix_unique])), 0, 80)
