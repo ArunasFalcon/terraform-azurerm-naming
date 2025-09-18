@@ -927,10 +927,10 @@ locals {
       regex       = "^[a-zA-Z0-9][a-zA-Z0-9-._]+[a-zA-Z0-9_]$"
     }
     firewall = {
-      name        = substr(join("-", compact([local.prefix, "fw", local.suffix])), 0, 80)
-      name_unique = substr(join("-", compact([local.prefix, "fw", local.suffix_unique])), 0, 80)
+      name        = substr(join("-", compact([local.prefix, "afw", local.suffix])), 0, 80)
+      name_unique = substr(join("-", compact([local.prefix, "afw", local.suffix_unique])), 0, 80)
       dashes      = true
-      slug        = "fw"
+      slug        = "afw"
       min_length  = 1
       max_length  = 80
       scope       = "resourceGroup"
@@ -987,10 +987,10 @@ locals {
       regex       = "^[a-zA-Z0-9][a-zA-Z0-9-._]+[a-zA-Z0-9_]$"
     }
     firewall_policy_rule_collection_group = {
-      name        = substr(join("-", compact([local.prefix, "fwprcg", local.suffix])), 0, 80)
-      name_unique = substr(join("-", compact([local.prefix, "fwprcg", local.suffix_unique])), 0, 80)
+      name        = substr(join("-", compact([local.prefix, "rcg", local.suffix])), 0, 80)
+      name_unique = substr(join("-", compact([local.prefix, "rcg", local.suffix_unique])), 0, 80)
       dashes      = true
-      slug        = "fwprcg"
+      slug        = "rcg"
       min_length  = 1
       max_length  = 80
       scope       = "parent"

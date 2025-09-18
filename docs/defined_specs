@@ -21,7 +21,7 @@ az = {
     traffic_manager_profile    = "traf"
     private_endpoint           = "pe"    // Not in the specs
     private_service_connection = "psc"   // Not in the specs
-    firewall                   = "fw"    // Not in the specs
+    firewall                   = "afw"    // Not in the specs
     firewall_ip_configuration  = "fwipc" // Not in the specs
 
     // Compute and Web
