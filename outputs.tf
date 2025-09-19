@@ -897,7 +897,7 @@ output "public_ip" {
 }
 
 output "ip_group" {
-  value = local.az.ip_group
+  value       = local.az.ip_group
   description = "Ip group"
 }
 
@@ -1232,8 +1232,13 @@ output "virtual_wan" {
 }
 
 output "virtual_hub" {
-  value = local.az.virtual_hub
+  value       = local.az.virtual_hub
   description = "Virtual Hub"
+}
+
+output "virtual_hub_routing_intent" {
+  value       = local.az.virtual_hub_routing_intent
+  description = "Virtual Hub Routing Intent"
 }
 
 output "windows_virtual_machine" {
