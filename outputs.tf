@@ -1241,6 +1241,11 @@ output "virtual_hub_routing_intent" {
   description = "Virtual Hub Routing Intent"
 }
 
+output "virtual_hub_connection" {
+  value       = local.az.virtual_hub_connection
+  description = "Virtual Hub Connection"
+}
+
 output "windows_virtual_machine" {
   value       = local.az.windows_virtual_machine
   description = "Windows Virtual Machine"
